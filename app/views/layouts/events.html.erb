@@ -1,0 +1,35 @@
+<div class="content-page">
+    <div class="content">
+        <div class="container">
+           <%= form_with scope: :events, url: events_path, local: true do |form| %>
+           <h1>user book form</h1>
+              <div class="form-group p-2">
+                 <strong><%= form.label :Event_name %></strong><br>
+                 <%= form.text_field :Event_name, class: 'form-control bg-light' %>
+              </div>
+             <div class="form-group p-2">
+              <strong><%= form.label :Place %></strong><br>
+               <%= form.radio_button :Place, "Andhra" %>
+               <%= form.label :Place, "Andhra" %>
+               <%= form.radio_button :Place, "Telangana" %>
+               <%= form.label :Place, "Telangana" %>
+             </div>
+             <div class="form-group p-2">
+             <strong><%= form.label :Date %></strong><br>
+             <%= form.date_field :Date %>
+             </div>
+             <div class="form-group p-2">
+              <strong><%= form.label :Day %></strong><br>
+              <%= form.text_field :Day, class: 'form-control bg-light' %>
+             </div>
+             <div class="form-group p-2">
+                <%= form.submit :submit, class: 'form-control btn-dark' %>
+              </div>
+              <% end %>
+             <a href="/admin" >Back to Home</a>
+         </div>
+     </div>
+  </div>
+</div>
+</body>
+</html>

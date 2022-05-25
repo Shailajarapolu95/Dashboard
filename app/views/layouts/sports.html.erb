@@ -1,0 +1,28 @@
+<div class="content-page">
+    <div class="content">
+        <div class="container">
+           <%= form_with scope: :sports, url: sports_path, local: true do |form| %>
+           <h1>Sports registration form</h1>
+              <div class="form-group p-2">
+                 <strong><%= form.label :name %></strong><br>
+                 <%= form.text_field :name, class: 'form-control bg-light' %>
+              </div>
+             <div class="form-group p-2">
+                <strong><%= form.label :Place %></strong><br>
+                <%= form.text_field :Place, class: 'form-control  bg-light' %>
+             </div>
+             <div class="form-group p-2">
+                <strong><%= form.label :address %></strong><br>
+                <%= form.text_field :address, class: 'form-control  bg-light' %>
+             </div>
+             <div class="form-group p-2">
+                <%= form.submit :submit, class: 'form-control btn-dark' %>
+              </div>
+              <% end %>
+             <a href="/admin" >Back to Home</a>
+         </div>
+     </div>
+  </div>
+</div>
+</body>
+</html>

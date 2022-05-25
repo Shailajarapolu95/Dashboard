@@ -1,0 +1,24 @@
+<div class="content-page">
+    <div class="content">
+        <div class="container">
+           <%= form_with scope: :books, url: books_path, local: true do |form| %>
+           <h1>user book form</h1>
+              <div class="form-group p-2 ">
+                 <strong><%= form.label :bname %></strong><br>
+                 <%= form.text_field :bname, class: 'form-control bg-light' %>
+              </div>
+             <div class="form-group p-2">
+                <strong><%= form.label :author %></strong><br>
+                <%= form.text_field :author, class: 'form-control  bg-light' %>
+             </div>
+             <div class="form-group p-2">
+                <%= form.submit :submit, class: 'form-control btn-dark' %>
+              </div>
+              <% end %>
+             <a href="/admin" >Back to Home</a>
+         </div>
+     </div>
+  </div>
+</div>
+</body>
+</html>
